@@ -1,0 +1,16 @@
+---
+# tasks file for lic_update
+- name: Remove the current license
+  file:
+    path: etc/vmware/license.cfg
+    state: absent
+
+- name: Copy eval license file
+  copy:
+    src: "/etc/vmware/.#license.cfg"
+    remote_src: yes
+    dest: /etc/vmware/license.cfg
+  notify:
+      - restart_vpxa
+
+ 

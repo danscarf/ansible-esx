@@ -1,0 +1,4 @@
+---
+- hosts: esx_hosts
+  roles:
+  - lic_update
