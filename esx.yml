@@ -1,4 +1,4 @@
 ---
-- hosts: esx_hosts
+- hosts: all
   roles:
   - lic_update
